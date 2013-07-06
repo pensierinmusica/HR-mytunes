@@ -17,14 +17,14 @@
     <script src="src/PlayerView.js"></script>
     <script src="src/LibraryView.js"></script>
     <script src="src/LibraryEntryView.js"></script>
+    <script src="src/SongQueueView.js"></script>
+    <script src="src/SongQueueEntryView.js"></script>
     <script src="src/AppView.js"></script>
 
     <script>
       $(function(){
         // set up model objects
-        var library = new Songs(songData);
-        var app = new App({library: library});
-
+        var app = new App({library: new Songs(songData)});
         // build a view for the top level of the whole app
         var appView = new AppView({model: app});
 
